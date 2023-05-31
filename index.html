@@ -29,7 +29,7 @@
             }
             try{
                 fetch('https:/\/us-central1-website-382116.cloudfunctions.net/image_test', {
-                    data: {'return': `${x},${y}`},
+                    body: JSON.stringify({'return': `${x},${y}`}),
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
